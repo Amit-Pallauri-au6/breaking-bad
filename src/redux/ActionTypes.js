@@ -1,0 +1,2 @@
+export const FETCH_CASTS = 'FETCH_CASTS'
+export const FUZZY_SEARCH = 'FUZZY_SEARCH'

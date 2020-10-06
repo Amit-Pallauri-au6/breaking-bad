@@ -1,0 +1,164 @@
+*{
+  margin: 0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(46, 26, 26);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* for the loading button */
+.container{
+  display:flex;
+  height:100vh;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+}
+.box{
+  width:150px;
+  height:150px;
+  background:transparent;
+  border-radius:50%;
+  animation: loaderAnimation infinite 0.5s reverse
+}
+@keyframes loaderAnimation {
+  0% {
+    box-shadow: -4px -4px 0px 0px #5d4daf;
+  }
+  12.5% {
+    box-shadow: -4px 0px 0px 0px #299957;
+  }
+  25% {
+    box-shadow: -4px 4px 0px 0px #ee9c22;
+  }
+  37.5% {
+    box-shadow: 0px 4px 0px 0px #cc042f;
+  }
+  50% {
+    box-shadow: 4px 4px 0px 0px #0a5cd6;
+  }
+  62.5% {
+    box-shadow: 4px 0px 0px 0px #d12ba8;
+  }
+  75% {
+    box-shadow: 4px -4px 0px 0px #eeff00;
+  }
+  87.5% {
+    box-shadow: 0px -4px 0px 0px #5d4daf;
+  }
+  100% {
+    box-shadow: -4px -4px 0px 0px #5d4daf;
+  }
+}
+
+/* content */
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+}
+
+.profile{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flip-card {
+  margin: 1.5rem;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back hr{
+  border: 0;
+  height: 1px;
+  margin: 5px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), white, rgba(0, 0, 0, 0));
+}
+
+/* input field */
+
+.input-form input{
+  text-align: center;
+  background: white;
+  outline: none;
+  border-radius: 20px;
+  height: 25px;
+  width: 300px;
+  font-size: 15px;
+}
